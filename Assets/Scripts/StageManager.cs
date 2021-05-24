@@ -7,8 +7,10 @@ public class StageManager : MonoBehaviour
 
     public delegate void HitEvent();
 
+    public bool goToNextScene = true;
     public int nextScene;
     public float timeUntilCut;
+    float sceneTimer;
     public float spawnRateMin, spawnRateMax;
     public HitEvent OnHit;
     public GameObject antPrefab;
@@ -45,6 +47,8 @@ public class StageManager : MonoBehaviour
     }
     void Update()
     {
+        sceneTimer += Time.deltaTime;
+
         if(numAntsSpawned < spawnAmount && Time.time > timer + spawnSpeed){
             
             numAntsSpawned ++;
@@ -53,7 +57,7 @@ public class StageManager : MonoBehaviour
             ResetAnt();
         }
 
-        if(Time.time > timeUntilCut){
+        if(goToNextScene && sceneTimer > timeUntilCut){
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1, LoadSceneMode.Single);
         }
     }
