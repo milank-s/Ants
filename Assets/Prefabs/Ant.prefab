@@ -1786,11 +1786,12 @@ MonoBehaviour:
   panicTime: 2
   blood: {fileID: 5899292772888559121}
   checkpoints: []
+  manager: {fileID: 0}
   bodyMesh: {fileID: 7123876793907023040}
   closeEnough: 1
   wiggleFrequency: 4
   wiggleAmplitude: 1.5
-  pauseChance: 50
+  pauseChance: 10
   pauseTime: 1
 --- !u!54 &7123876794840769038
 Rigidbody:

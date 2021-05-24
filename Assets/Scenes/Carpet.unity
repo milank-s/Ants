@@ -528,6 +528,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -40
       objectReference: {fileID: 0}
+    - target: {fileID: 8533585095642857971, guid: 56c48245e66c55043901af5682073d92,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533585095642857971, guid: 56c48245e66c55043901af5682073d92,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8533585095642857971, guid: 56c48245e66c55043901af5682073d92,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8533585095642857975, guid: 56c48245e66c55043901af5682073d92,
         type: 3}
       propertyPath: m_Name
@@ -564,6 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6273f67c668ad347b7adbb9b2147f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  goToNextScene: 1
   nextScene: 2
   timeUntilCut: 3
   spawnRateMin: 1
@@ -655,7 +671,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e0d1f7faf54e2704589721351014f137, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e62afab823b79c349839211cceadb313, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

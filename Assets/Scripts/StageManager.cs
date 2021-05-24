@@ -32,6 +32,7 @@ public class StageManager : MonoBehaviour
     public void ResetAnt(){
         if(antsSpawned.Count > 0){
             antsSpawned[0].transform.position = spawns[Random.Range(0, spawns.Length)].transform.position;
+            antsSpawned[0].checkpoints = checkpoints;
             antsSpawned[0].gameObject.SetActive(true);
             antsSpawned.RemoveAt(0);
         }else{

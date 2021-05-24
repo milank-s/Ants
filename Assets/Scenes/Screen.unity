@@ -1046,9 +1046,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goToNextScene: 0
   nextScene: 0
-  timeUntilCut: 0
-  spawnRateMin: 0
-  spawnRateMax: 0
+  timeUntilCut: 15
+  spawnRateMin: 1
+  spawnRateMax: 2
   antPrefab: {fileID: 7123876794840769027, guid: 3e85970ee0b6af24cba184de27b938df,
     type: 3}
   spawnAmount: 15
