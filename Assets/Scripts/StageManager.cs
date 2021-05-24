@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class StageManager : MonoBehaviour
 {
 
     public delegate void HitEvent();
+
+    public int nextScene;
+    public float timeUntilCut;
+    public float spawnRateMin, spawnRateMax;
     public HitEvent OnHit;
     public GameObject antPrefab;
 
+    public int spawnAmount = 15;
     public List<Ant> antsSpawned;
     public List<Checkpoint> checkpoints;
     public Transform[] spawns;
 
+    int numAntsSpawned;
     public static StageManager i;
     float spawnSpeed;
     float timer;
@@ -20,7 +26,6 @@ public class StageManager : MonoBehaviour
     {
         i = this;
     }
-
 
     public void ResetAnt(){
         if(antsSpawned.Count > 0){
@@ -31,6 +36,7 @@ public class StageManager : MonoBehaviour
             SpawnAnt();
         }
     }
+
     public void SpawnAnt(){
         GameObject newAnt = Instantiate(antPrefab, spawns[Random.Range(0, spawns.Length)].position, Quaternion.identity);
         Ant antscript = newAnt.GetComponent<Ant>();
@@ -39,10 +45,16 @@ public class StageManager : MonoBehaviour
     }
     void Update()
     {
-        if(Time.time > timer + spawnSpeed){
+        if(numAntsSpawned < spawnAmount && Time.time > timer + spawnSpeed){
+            
+            numAntsSpawned ++;
+            spawnSpeed = Random.Range(spawnRateMin, spawnRateMax);
             timer = Time.time;
-            spawnSpeed = Random.Range(0.2f, 0.5f);
             ResetAnt();
+        }
+
+        if(Time.time > timeUntilCut){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1, LoadSceneMode.Single);
         }
     }
 }

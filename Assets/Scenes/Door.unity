@@ -732,8 +732,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6273f67c668ad347b7adbb9b2147f87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextScene: 2
+  timeUntilCut: 3
+  spawnRateMin: 1
+  spawnRateMax: 2
   antPrefab: {fileID: 7123876794840769027, guid: 3e85970ee0b6af24cba184de27b938df,
     type: 3}
+  spawnAmount: 15
   antsSpawned: []
   checkpoints:
   - {fileID: 43388878097228962}

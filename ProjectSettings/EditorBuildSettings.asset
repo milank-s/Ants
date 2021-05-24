@@ -4,5 +4,26 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Deck.unity
+    guid: b6d1dceb166d95c458fc3ee4a6a5b351
+  - enabled: 1
+    path: Assets/Scenes/Door.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Floor.unity
+    guid: 57d7298eff5b2474c9658e91f7a3bd10
+  - enabled: 1
+    path: Assets/Scenes/Carpet.unity
+    guid: e6048249d1808a44a995afa4f9e10c96
+  - enabled: 1
+    path: Assets/Scenes/Counter.unity
+    guid: dc7223c9dcc654a47af599fe5ffca73c
+  - enabled: 1
+    path: Assets/Scenes/Desk.unity
+    guid: fea4cef24289abf43a856a0be8add2dc
+  - enabled: 1
+    path: Assets/Scenes/Screen.unity
+    guid: a008ab8c2f3a7174e9462aea5bd3af78
   m_configObjects: {}

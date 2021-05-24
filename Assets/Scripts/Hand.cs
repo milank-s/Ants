@@ -64,6 +64,8 @@ public class Hand : MonoBehaviour
             whacked = true;
             animator.SetTrigger("whack");
             sound.PlayOneShot(slapSounds[Random.Range(0, slapSounds.Length)]);
+
+            
             if(StageManager.i.OnHit != null){
                 StageManager.i.OnHit.Invoke();
             }
