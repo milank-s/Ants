@@ -46,7 +46,7 @@ public class Ant : MonoBehaviour
         
         dir = Vector3.Lerp(transform.forward, dir.normalized, Time.deltaTime * 10f);
         
-        transform.rotation = Quaternion.LookRotation(dir, -Vector3.forward);
+        transform.rotation = Quaternion.LookRotation(dir, manager.upDir.up);
         float curSpeed = state == AntState.panic ? panicSpeed : speed;
         Vector3 finalDir = dir;
         finalDir.z = 0;

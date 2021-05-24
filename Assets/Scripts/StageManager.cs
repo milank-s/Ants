@@ -15,6 +15,7 @@ public class StageManager : MonoBehaviour
     public HitEvent OnHit;
     public GameObject antPrefab;
 
+    public Transform upDir;
     public int spawnAmount = 15;
     public List<Ant> antsSpawned;
     public List<Checkpoint> checkpoints;
